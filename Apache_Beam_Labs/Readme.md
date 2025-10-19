@@ -5,6 +5,6 @@ This repository contains hands-on labs using **Apache Beam (Python)** to explore
 ## Features
 - WordCount pipeline using DirectRunner and SparkRunner
 - Run Beam on Spark locally
-- Input/output with text and CSV files
+- Input/output with text files
 - PipelineOptions and runners explored
 - Clean, modular code
