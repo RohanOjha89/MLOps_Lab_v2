@@ -10,6 +10,9 @@ I evaluated multiple modeling strategies and imbalance-handling techniques to ob
 | 2 | **SMOTE Oversampling**                       | Apply SMOTE to synthetically increase minority class                                                                                           | Improve recall by balancing dataset                                             |
 | 3 | **Class-Weighted / Scale-Pos-Weight Models** | No oversampling — models trained with: <br>• `class_weight="balanced"` (Random Forest, Logistic Regression) <br>• `scale_pos_weight` (XGBoost) | Penalize misclassification of minority class to force models to learn imbalance |
 
+## Models Used: 
+Logistic Regression, Random Forest, and XGBoost were applied across three setups — raw data, SMOTE-balanced data, and class-weighted/scale-pos-weight imbalance handling — to compare performance trade-offs, especially recall and F1-score.
+
 ## Metrics Tracked
 accuracy
 precision
@@ -17,7 +20,7 @@ recall (primary focus for imbalance)
 f1_score
 roc_auc_score
 
-Goal: Understand real trade-offs between precision-recall-AUC across imbalance techniques.
+Goal: Understand real trade-offs between precision-recall-AUC in an imbalanced dataset.
 
 ## Observations Summary
 | Setting                           | Behavior                                                                         |
@@ -25,6 +28,8 @@ Goal: Understand real trade-offs between precision-recall-AUC across imbalance t
 | Raw Data                          | High accuracy, **very low recall** (classic imbalance issue)                     |
 | SMOTE                             | Recall and F1 improved significantly, slight precision drop (expected trade-off) |
 | Class-Weighted / Scale Pos Weight | Best **recall-precision balance**, especially in XGBoost                         |
+
+> Note: I have attached the performance screenshots obtained for the 3 different techniques in the folder.
 
 ## How to Run
 ### Run MLflow Tracking server:
@@ -41,6 +46,7 @@ python run_mlflow.sh
 http://127.0.0.1:5001
 
 ## Folder Structure
+```bash
 Mlflow_Labs_User/
     ├── Model_Techniques_MLflow.ipynb
     ├── run_mlflow.sh
@@ -48,5 +54,5 @@ Mlflow_Labs_User/
     ├── mlartifacts/    # ignored
     ├── mlflow.db       # ignored
     └── README.md
-
+```
 > Note: MLflow artifacts (`mlruns`, `mlartifacts`, `mlflow.db`) are intentionally excluded via `.gitignore`.
