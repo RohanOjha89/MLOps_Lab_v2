@@ -36,8 +36,6 @@ mlflow server \
 
 ### Execute experiment script / notebook:
 python run_mlflow.sh
-# OR open and run:
-Model_Techniques_MLflow.ipynb
 
 ### Open MLflow UI:
 http://127.0.0.1:5001
