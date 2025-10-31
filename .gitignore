@@ -4,7 +4,7 @@ beam-env
 Apache_Beam_Labs/beam-env 
 Apache_Beam_Labs/exec-l
 
-# Mlflow
+# Mlflow Lab
 Mlflow_Labs_User/mlruns/
 Mlflow_Labs_User/mlartifacts/
 Mlflow_Labs_User/mlflow.db
