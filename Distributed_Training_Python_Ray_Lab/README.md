@@ -6,8 +6,8 @@ The lab highlights how Ray can parallelize computationally intensive tasks acros
 - Model: ElasticNet (from sklearn.linear_model)
 - Task: Grid search for optimal hyperparameters using cross-validation.
 - Hyperparameters:
-        alpha_values: [0.0001, 0.001, 0.01, 0.1]
-        l1_ratio_values: [0.1, 0.2, 0.3, 0.4, 0.5, 0.75, 0.9]
+* alpha_values: [0.0001, 0.001, 0.01, 0.1]
+* l1_ratio_values: [0.1, 0.2, 0.3, 0.4, 0.5, 0.75, 0.9]
 
 - Total Combinations: 4 × 7 = 28 hyperparameter pairs
 - Dataset: California Housing
